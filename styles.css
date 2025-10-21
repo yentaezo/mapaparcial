@@ -1,0 +1,270 @@
+/* 1. Thin - 100*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* 2. ExtraLight - 200*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* 3. Light - 300*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* 4. Regular - 400*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* 5. Medium - 500*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* 6. Bold - 700*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* 7. ExtraBold - 800*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* 8. Heavy - 900*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/*CODIGO DE LA PÁGINA*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Geoform', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    /* Usamos Flexbox para organizar el header y el main verticalmente */
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    /* Fuente por defecto para el contenido que no sea el header */
+}
+
+/* --- ESTILOS DEL HEADER (Corregidos) --- */
+header {
+    font-weight: 900;
+    background-color: #0c3566;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    height: 70px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    }
+
+.dropbtn {
+    font-weight: 500;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 15px;
+}
+
+.dropdown-content {
+    font-weight: 300;
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #0c3566;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+header span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* --- ESTILOS DEL CONTENIDO PRINCIPAL Y MAPA --- */
+main {
+    flex-grow: 1; /* Hace que el main ocupe todo el espacio restante */
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+#svg_container {
+    border-radius: 15px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    margin: 15px;
+    width: 100%;
+    height: 100%;
+    max-width: 80vh;
+    max-height: 80vh;
+
+    /*--- Mapa de fondo ---*/
+    background-image: url('./resources/mapa-fondo.png'); /* Asegúrate de tener la ruta correcta */
+    background-size: contain; /* Ajusta la imagen para que quepa sin cortarse */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.floormap {
+    width: 100%;
+    height: 100%;
+}
+
+.buildings > path {
+    /*stroke: gray;
+    stroke-width: 2px;
+    cursor: pointer;*/
+}
+
+.video-background {
+    position: fixed; /* Lo fija en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Lo envía detrás de todo el contenido */
+    overflow: hidden; /* Oculta las partes del video que se desbordan */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    /* Esta es la propiedad clave: cubre el área sin estirarse */
+    object-fit: cover; 
+}
+
+.hover-text {
+    font-size: 25pt;
+    font-weight: 700; /* Bold, para que resalte */
+    text-anchor: middle; /* Centra el texto horizontalmente en su coordenada X */
+    fill: white; /* Color del texto */
+    pointer-events: none; /* MUY IMPORTANTE: Evita que el texto interfiera con el mouse */
+
+    stroke: #0c3566; /* El color del "fondo" */
+    stroke-width: 10px;  /* El grosor del "fondo" */
+    stroke-linejoin: round; /* Hace las esquinas del borde más suaves */
+    paint-order: stroke fill; /* Le dice al navegador que dibuje el borde DETRÁS del relleno */
+}

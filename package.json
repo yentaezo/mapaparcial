@@ -1,0 +1,20 @@
+{
+  "name": "estoyharto",
+  "version": "1.0.0",
+  "description": "estoyharto",
+  "license": "ISC",
+  "author": "yenta",
+  "type": "module",
+  "main": "script2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "topojson-client": "^3.1.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "type": "Topology",
+  "objects": {
+    "buildings": {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Polygon",
+          "arcs": [[0]],
+          "properties": {
+            "id": 0,
+            "name": "Auditorio",
+            "url": "auditorio.html"
+          }
+        },
+        {
+          "type": "Polygon",
+          "arcs": [[1]],
+          "properties": {
+            "id": 1,
+            "name": "Edificio\nCentral",
+            "url": "edificio-central.html"
+          }
+        },
+        {
+          "type": "Polygon",
+          "arcs": [[2]],
+          "properties": {
+            "id": 2,
+            "name": "Rectoría",
+            "url": "rectoria.html"
+          }
+        },
+        {
+          "type": "Polygon",
+          "arcs": [[3]],
+          "properties": {
+            "id": 3,
+            "name": "CIPAV",
+            "url": "cipav.html"
+          }
+        },
+        {
+          "type": "Polygon",
+          "arcs": [[4]],
+          "properties": {
+            "id": 4,
+            "name": "DAF - DCA",
+            "url": "daf-dca.html"
+          }
+        }
+      ]
+    }
+  },
+  "arcs": [
+    [[228, 965], [0, 965], [0, 738], [161, 738], [161, 836], [228, 836], [228, 965]],
+    [[277, 403], [377, 403], [377, 642], [277, 642], [277, 403]],
+    [[778, 24], [1000, 24], [1000, 80], [778, 80], [778, 24]],
+    [[912, 194], [968, 194], [968, 250], [912, 250], [912, 194]],
+    [[172, 738], [228, 738], [228, 825], [172, 825], [172, 738]]
+  ]
+}

@@ -1,0 +1,379 @@
+/* 1. Thin - 100*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* 2. ExtraLight - 200*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* 3. Light - 300*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* 4. Regular - 400*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* 5. Medium - 500*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* 6. Bold - 700*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* 7. ExtraBold - 800*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* 8. Heavy - 900*/
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geoform';
+    src: url('./fonts/Geoform-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/*CODIGO DE LA PÁGINA*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Geoform', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    /* Usamos Flexbox para organizar el header y el main verticalmente */
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+/* --- ESTILOS DEL HEADER (Corregidos) --- */
+header {
+    font-weight: 900;
+    background-color: #0c3566;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    height: 70px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    }
+
+.dropbtn {
+    font-weight: 500;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 15px;
+}
+
+.dropdown-content {
+    font-weight: 300;
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #0c3566;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+header span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* --- Contenedor Principal --- */
+.main-content {
+    position: relative; /* Clave para posicionar el texto encima del carrusel */
+    width: 100%;
+}
+
+
+/* --- Carrusel de Imágenes (Morado) --- */
+.image-carousel {
+    width: 100%;
+    height: 60vh; 
+    overflow: hidden; 
+    position: relative; /* Needed for positioning if you add controls later */
+}
+
+.carousel-track {
+    display: flex;
+    /* Width is 100% * (number of original images + 1 for the duplicate) */
+    /* For 5 images, it's 600% */
+    width: 600%; 
+    height: 100%;
+    /* Animation: 'slide' is the name, 50s is total duration (10s per image), it's linear and infinite */
+    animation: slide 50s linear infinite; 
+}
+
+.carousel-track img {
+    /* Each image takes up an equal portion of the track */
+    width: 16.666%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Animación del carrusel con deslizamiento */
+@keyframes slide {
+    /* Each keyframe percentage is calculated as (image_number / total_images) * 100 */
+    /* Stays on image 1 for a bit */
+    0%, 16.66% { transform: translateX(0%); }
+
+    /* Slides to image 2 */
+    20%, 33.32% { transform: translateX(-16.666%); }
+
+    /* Slides to image 3 */
+    36.66%, 50% { transform: translateX(-33.333%); }
+
+    /* Slides to image 4 */
+    53.33%, 66.65% { transform: translateX(-49.999%); }
+
+    /* Slides to image 5 */
+    70%, 83.31% { transform: translateX(-66.666%); }
+
+    /* This last step ensures a smooth loop back to the start */
+    86.66%, 100% { transform: translateX(-83.333%); }
+}
+
+
+/* --- DIV de Texto (Celeste) --- */
+.text-div {
+    width: 70vw;
+    background-color: white;
+    padding: 5vw;
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    
+    /* Posicionamiento sobre el carrusel */
+    position: absolute;
+    top: 30vh; /* Lo baja para que empiece a mitad del carrusel */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Se asegura de que esté por encima */
+}
+.text-div h2 {
+    color:#0c3566;
+    font-size: 50pt;
+    font-weight: 800;
+    margin-top: 0px;
+    margin-bottom: 15px; /* ExtraBold */
+}
+.text-div .subtitle {
+    font-size: 25pt;
+    font-weight: 500; /* Medium */
+    font-style: italic;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    color: #555;
+}
+.text-div .text-content h3{
+    font-weight: 600;
+    font-style: italic;
+    /*margin-top: 14pt;*/
+}
+.text-div .text-content li{
+    margin-left: 5vw;
+}
+.text-div .text-content {
+    text-align: justify;
+    font-weight: 400; /* Regular */
+    font-size: 14pt;
+    line-height: 1.6;
+    margin-top: 30px;
+}
+
+
+/* --- Galería de Imágenes (Naranja) --- CORREGIDO --- */
+.image-gallery {
+    /* This is the key change: we make the gallery a positioned canvas */
+    position: absolute;
+    width: 100vw; /* A width for the whole gallery area */
+    height: 200%; /* Take up the necessary height */
+    top: 70vh; /* Position it relative to the top */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15; /* Place it below the text-div by default */
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Optional: adds nice rounded corners */
+}
+
+/* We now position each box absolutely within the gallery canvas */
+.image-box-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 17vw;
+    height: 25vw;
+}
+
+.image-box-center {
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    right: 0; /* This places it on the right side */
+    top: 20%;
+    width: 17vw;
+    height: 25vw;
+}
+
+/* Remove explicit height from bottom images and use aspect-ratio */
+.image-box-bottom-left {
+    position: absolute;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    left: 0;
+    margin-top: 30%;
+    width: 17vw;
+    height: 25vw;
+}
+
+.image-box-bottom-right {
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    right: 0;
+    margin-top: 41.3%;
+    width: 17vw;
+    height: 25vw;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/*
+.image-box-left { grid-column: 1 / 2; grid-row: 1 / 2; }
+.image-box-center { grid-column: 2 / 3; grid-row: 1 / 3; }
+.image-box-bottom-container { grid-column: 1 / 2; grid-row: 2 / 3; display: flex; gap: 20px;}
+
+/* Relaciones de aspecto
+.image-box-left { width: 16.5vw; height: 24.1vw; aspect-ratio: 2 / 3; }
+.image-box-center { width: 16.5vw; height: 29.4vw; aspect-ratio: 5 / 9; }
+.image-box-bottom-left { width: 25vw; height: 25vw; aspect-ratio: 1 / 1; flex-shrink: 0; }
+.image-box-bottom-right { width: 25vw; height: 25vw; flex-grow: 1; aspect-ratio: 1 / 1; }*/

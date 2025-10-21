@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Campus UII - Mapa Interactivo</title>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="./resources/fondo_index_video.webm" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn">Secciones</button>
+            <div class="dropdown-content">
+                <a href="auditorio.html">Auditorio</a>
+                <a href="cipav.html">CIPAV</a>
+                <a href="daf-dca.html">DAF / DCA</a>
+                <a href="rectoria.html">Rectoría</a>
+                <a href="edificio-central.html">Edificio Central</a>
+            </div>
+        </div>
+        <h1><a href="index.html">Campus UII</a></h1>
+        <span>Mapa Interactivo</span>
+    </header>
+    
+    <main>
+        <div id="svg_container"></div>
+    </main>
+    
+    <script src="./script2.js" type="module"></script>
+</body>
+</html>
