@@ -261,6 +261,7 @@ header span {
 
 /* --- DIV de Texto (Celeste) --- */
 .text-div {
+    margin: 10vh;
     width: 70vw;
     background-color: white;
     padding: 5vw;
@@ -376,4 +377,5 @@ header span {
 .image-box-left { width: 16.5vw; height: 24.1vw; aspect-ratio: 2 / 3; }
 .image-box-center { width: 16.5vw; height: 29.4vw; aspect-ratio: 5 / 9; }
 .image-box-bottom-left { width: 25vw; height: 25vw; aspect-ratio: 1 / 1; flex-shrink: 0; }
+
 .image-box-bottom-right { width: 25vw; height: 25vw; flex-grow: 1; aspect-ratio: 1 / 1; }*/
