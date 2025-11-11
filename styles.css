@@ -267,4 +267,36 @@ main {
     stroke-width: 10px;  /* El grosor del "fondo" */
     stroke-linejoin: round; /* Hace las esquinas del borde más suaves */
     paint-order: stroke fill; /* Le dice al navegador que dibuje el borde DETRÁS del relleno */
+
 }
+
+/* --- Responsive Styles for Mobile (styles.css) --- */
+@media (max-width: 768px) {
+    /* Make the main container take full width available */
+    main {
+        padding: 10px; /* Reduce padding slightly */
+    }
+
+    #svg_container {
+        /* Use viewport width instead of height for sizing on potentially narrow screens */
+        /* Let height be automatic based on the SVG's viewBox aspect ratio */
+        max-width: 90vw; 
+        max-height: 90vh; /* Keep a vertical limit too */
+        height: auto; /* Allow height to adjust based on width */
+        border-radius: 10px; /* Slightly smaller radius */
+        margin: 10px;
+    }
+
+    .hover-text {
+         font-size: 14pt; /* Smaller text on mobile */
+         stroke-width: 4px; /* Slightly thinner background stroke */
+    }
+}
+
+/* Optional: Rule for very wide screens to prevent map getting too big */
+ @media (min-aspect-ratio: 16/9) {
+     #svg_container {
+        /* On wide screens, limit width based on height instead */
+         max-width: 80vh; 
+     }
+ }
