@@ -272,6 +272,19 @@ main {
 
 /* --- Responsive Styles for Mobile (styles.css) --- */
 @media (max-width: 768px) {
+    /* Header adjustments (Optional: Smaller fonts/padding if needed) */
+    header {
+        padding: 10px 15px;
+        height: 60px; /* Slightly smaller header */
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .dropbtn, header span {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    
     /* Make the main container take full width available */
     main {
         padding: 10px; /* Reduce padding slightly */
@@ -300,3 +313,4 @@ main {
          max-width: 80vh; 
      }
  }
+
