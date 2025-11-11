@@ -378,3 +378,101 @@ header span {
 .image-box-bottom-left { width: 25vw; height: 25vw; aspect-ratio: 1 / 1; flex-shrink: 0; }
 
 .image-box-bottom-right { width: 25vw; height: 25vw; flex-grow: 1; aspect-ratio: 1 / 1; }*/
+
+/* --- Responsive Styles for Mobile (plantilla.css) --- */
+@media (max-width: 768px) {
+
+    /* Header adjustments (Optional: Smaller fonts/padding if needed) */
+    header {
+        padding: 10px 15px;
+        height: 60px; /* Slightly smaller header */
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .dropbtn, header span {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    /* Main content padding */
+    .main-content {
+       /* No longer needs position: relative */
+       width: 100%; 
+    }
+
+    /* Carousel height */
+    .image-carousel {
+        height: 40vh; /* Smaller height on vertical screens */
+    }
+
+    /* Text Div adjustments */
+    .text-div {
+        position: static; /* Remove absolute positioning */
+        transform: none; /* Remove transform */
+        width: 95%; /* Take up more width */
+        margin: -10vh auto 20px auto; /* Pull it up slightly over carousel, add bottom margin */
+        padding: 20px; /* Fixed padding instead of vw */
+        border-radius: 30px; /* Smaller radius */
+        top: auto; /* Reset positioning */
+        left: auto; /* Reset positioning */
+        z-index: 10; /* Keep it above default content */
+    }
+    .text-div h2 {
+        font-size: 28pt; /* Much smaller title */
+    }
+    .text-div .subtitle {
+        font-size: 18pt; /* Smaller subtitle */
+    }
+    .text-div .text-content {
+        font-size: 12pt; /* Smaller body text */
+        margin-top: 15px;
+    }
+     .text-div .text-content li{
+         margin-left: 20px; /* Adjust list indent */
+     }
+
+    /* Image Gallery adjustments - Stack images vertically */
+    .image-gallery {
+        position: static; /* Remove absolute positioning */
+        transform: none; /* Remove transform */
+        display: flex; /* Use flexbox for stacking */
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center items */
+        width: 95%;
+        height: auto; /* Auto height */
+        margin: 0 auto 30px auto; /* Center and add bottom margin */
+        gap: 15px; /* Space between images */
+        top: auto; /* Reset */
+        left: auto; /* Reset */
+        z-index: 5; 
+    }
+
+    /* Reset individual image boxes */
+    .image-box-left,
+    .image-box-center,
+    .image-box-bottom-container,
+    .image-box-bottom-left,
+    .image-box-bottom-right {
+        position: static; /* Remove absolute positioning */
+        width: 100%; /* Make them full width of the gallery container */
+        max-width: 400px; /* Optional: prevent them getting too wide */
+        height: auto; /* Auto height */
+        aspect-ratio: 16 / 9; /* Default aspect ratio, adjust as needed */
+        margin-top: 0; /* Reset margins */
+        right: auto; /* Reset */
+        bottom: auto; /* Reset */
+        left: auto; /* Reset */
+        flex-shrink: 1; /* Allow shrinking */
+        flex-grow: 0; /* Don't force growing */
+    }
+     .image-box-bottom-container {
+         width: 100%; /* Ensure container takes width */
+         display: flex;
+         flex-direction: column; /* Stack bottom images too */
+         gap: 15px;
+     }
+    .image-box-bottom-left, .image-box-bottom-right{
+         width: 100%; /* Ensure these take full width inside container */
+     }
+}
