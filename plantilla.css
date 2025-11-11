@@ -404,6 +404,7 @@ header span {
     /* Carousel height */
     .image-carousel {
         height: 40vh; /* Smaller height on vertical screens */
+        z-index: 1;
     }
 
     /* Text Div adjustments */
@@ -412,7 +413,7 @@ header span {
         transform: none; /* Remove transform */
         width: 95%; /* Take up more width */
         margin: -10vh auto 20px auto; /* Pull it up slightly over carousel, add bottom margin */
-        padding: 20px; /* Fixed padding instead of vw */
+        padding: 30px; /* Fixed padding instead of vw */
         border-radius: 30px; /* Smaller radius */
         top: auto; /* Reset positioning */
         left: auto; /* Reset positioning */
@@ -476,3 +477,4 @@ header span {
          width: 100%; /* Ensure these take full width inside container */
      }
 }
+
