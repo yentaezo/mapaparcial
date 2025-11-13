@@ -386,6 +386,8 @@ header span {
     header {
         padding: 10px 15px;
         height: 60px; /* Slightly smaller header */
+        z-index: 20;
+        position: relative;
     }
     header h1 {
         font-size: 1.5rem;
@@ -394,7 +396,10 @@ header span {
         font-size: 0.9rem;
         padding: 8px;
     }
-
+    .dropdown-content {
+    /* ... */
+    z-index: 1; /* Este z-index es relativo al header, así que 1 está bien */
+}
     /* Main content padding */
     .main-content {
        /* No longer needs position: relative */
@@ -405,6 +410,13 @@ header span {
     .image-carousel {
         height: 40vh; /* Smaller height on vertical screens */
         z-index: 1;
+    }
+
+    .carousel-track img {
+    /* Each image takes up an equal portion of the track */
+        width: 16.666%; 
+        height: 100%;
+        object-fit: cover; 
     }
 
     /* Text Div adjustments */
@@ -477,4 +489,5 @@ header span {
          width: 100%; /* Ensure these take full width inside container */
      }
 }
+
 
