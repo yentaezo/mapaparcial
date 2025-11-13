@@ -408,15 +408,30 @@ header span {
 
     /* Carousel height */
     .image-carousel {
-        height: 40vh; /* Smaller height on vertical screens */
-        z-index: 1;
+    width: 100%;
+    height: 40vh; 
+    overflow: hidden; 
+    position: relative; /* Needed for positioning if you add controls later */
+    z-index: 1;
+    }
+
+    .carousel-track {
+        display: flex;
+        /* Width is 100% * (number of original images + 1 for the duplicate) */
+        /* For 5 images, it's 600% */
+        width: 600%; 
+        height: 100%;
+        /* Animation: 'slide' is the name, 50s is total duration (10s per image), it's linear and infinite */
+        animation: slide 50s linear infinite;
+        z-index: 1; 
     }
 
     .carousel-track img {
-    /* Each image takes up an equal portion of the track */
+        /* Each image takes up an equal portion of the track */
         width: 16.666%; 
         height: 100%;
-        object-fit: cover; 
+        object-fit: cover;
+        z-index: 1;
     }
 
     /* Text Div adjustments */
@@ -425,7 +440,7 @@ header span {
         transform: none; /* Remove transform */
         width: 95%; /* Take up more width */
         margin: -10vh auto 20px auto; /* Pull it up slightly over carousel, add bottom margin */
-        padding: 30px; /* Fixed padding instead of vw */
+        padding: 10vw; /* Fixed padding instead of vw */
         border-radius: 30px; /* Smaller radius */
         top: auto; /* Reset positioning */
         left: auto; /* Reset positioning */
