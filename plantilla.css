@@ -436,11 +436,11 @@ header span {
 
     /* Text Div adjustments */
     .text-div {
-        position: static; /* Remove absolute positioning */
+        position: relative; /* Remove absolute positioning */
         transform: none; /* Remove transform */
         width: 95%; /* Take up more width */
         margin: -10vh auto 20px auto; /* Pull it up slightly over carousel, add bottom margin */
-        padding: 10vw; /* Fixed padding instead of vw */
+        padding: 8vw; /* Fixed padding instead of vw */
         border-radius: 30px; /* Smaller radius */
         top: auto; /* Reset positioning */
         left: auto; /* Reset positioning */
