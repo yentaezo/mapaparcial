@@ -143,8 +143,15 @@ header {
     padding: 15px 30px;
     height: 70px;
     width: 100%; /* Asegura que ocupe todo el ancho */
-    position: relative;
+    position: fixed;
+    z-index: 1000;
 }
+
+.page-footer-spacer {
+        position: unset;
+        height: 15vh;
+        width: 100%;
+    }
 
 .dropdown {
     position: relative;
@@ -268,11 +275,12 @@ header span {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     
     /* Posicionamiento sobre el carrusel */
-    position: absolute;
-    top: 30vh; /* Lo baja para que empiece a mitad del carrusel */
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    /*top: 30vh;  Lo baja para que empiece a mitad del carrusel */
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
     z-index: 10; /* Se asegura de que esté por encima */
+    margin: -30vh auto 0 auto; 
 }
 .text-div h2 {
     color:#0c3566;
@@ -305,16 +313,10 @@ header span {
     margin-top: 30px;
 }
 
-
-/* --- Galería de Imágenes (Naranja) --- CORREGIDO --- */
 .image-gallery {
-    /* This is the key change: we make the gallery a positioned canvas */
     position: absolute;
     width: 100vw; /* A width for the whole gallery area */
-    height: 200%; /* Take up the necessary height */
-    top: 70vh; /* Position it relative to the top */
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 10vh auto 0 auto;
     z-index: 15; /* Place it below the text-div by default */
 }
 
@@ -339,7 +341,7 @@ header span {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     right: 0; /* This places it on the right side */
-    top: 20%;
+    top: 10vw;
     width: 17vw;
     height: 25vw;
 }
@@ -350,7 +352,7 @@ header span {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     left: 0;
-    margin-top: 30%;
+    top: 30vw;
     width: 17vw;
     height: 25vw;
 }
@@ -360,24 +362,33 @@ header span {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     right: 0;
-    margin-top: 41.3%;
+    top: 40vw;
     width: 17vw;
     height: 25vw;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+.page-footer-spacer{
+    height: 15vh;
+    width: 100%;
+}
+.image-galleryShort{
+    display: none;
+}
 
-/*
-.image-box-left { grid-column: 1 / 2; grid-row: 1 / 2; }
-.image-box-center { grid-column: 2 / 3; grid-row: 1 / 3; }
-.image-box-bottom-container { grid-column: 1 / 2; grid-row: 2 / 3; display: flex; gap: 20px;}
 
-/* Relaciones de aspecto
-.image-box-left { width: 16.5vw; height: 24.1vw; aspect-ratio: 2 / 3; }
-.image-box-center { width: 16.5vw; height: 29.4vw; aspect-ratio: 5 / 9; }
-.image-box-bottom-left { width: 25vw; height: 25vw; aspect-ratio: 1 / 1; flex-shrink: 0; }
 
-.image-box-bottom-right { width: 25vw; height: 25vw; flex-grow: 1; aspect-ratio: 1 / 1; }*/
+
+
+
+
+
+
+
+
+
+
+
 
 /* --- Responsive Styles for Mobile (plantilla.css) --- */
 @media (max-width: 768px) {
@@ -386,8 +397,8 @@ header span {
     header {
         padding: 10px 15px;
         height: 60px; /* Slightly smaller header */
-        z-index: 20;
-        position: relative;
+        z-index: 1000;
+        position: sticky;
     }
     header h1 {
         font-size: 1.5rem;
@@ -458,33 +469,40 @@ header span {
     }
      .text-div .text-content li{
          margin-left: 20px; /* Adjust list indent */
-     }
+    }
 
     /* Image Gallery adjustments - Stack images vertically */
-    .image-gallery {
-        position: static; /* Remove absolute positioning */
-        transform: none; /* Remove transform */
-        display: flex; /* Use flexbox for stacking */
-        flex-direction: column; /* Stack vertically */
-        align-items: center; /* Center items */
+    .image-galleryShort {
+        position: static;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 95%;
-        height: auto; /* Auto height */
-        margin: 0 auto 30px auto; /* Center and add bottom margin */
-        gap: 15px; /* Space between images */
-        top: auto; /* Reset */
-        left: auto; /* Reset */
+        height: auto;
+        margin: 0 auto 30px auto;
+        gap: 15px;
+        top: auto;
+        left: auto;
         z-index: 5; 
     }
 
+    .image-galleryShort img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px; /* Optional: adds nice rounded corners */
+    }
+
     /* Reset individual image boxes */
-    .image-box-left,
-    .image-box-center,
-    .image-box-bottom-container,
-    .image-box-bottom-left,
-    .image-box-bottom-right {
+    .image-box-leftShort,
+    .image-box-centerShort,
+    .image-box-bottom-containerShort,
+    .image-box-bottom-leftShort,
+    .image-box-bottom-rightShort {
         position: static; /* Remove absolute positioning */
         width: 100%; /* Make them full width of the gallery container */
-        max-width: 400px; /* Optional: prevent them getting too wide */
+        max-width: 95%; /* Optional: prevent them getting too wide */
         height: auto; /* Auto height */
         aspect-ratio: 16 / 9; /* Default aspect ratio, adjust as needed */
         margin-top: 0; /* Reset margins */
@@ -494,15 +512,16 @@ header span {
         flex-shrink: 1; /* Allow shrinking */
         flex-grow: 0; /* Don't force growing */
     }
-     .image-box-bottom-container {
+    .image-box-bottom-containerShort {
          width: 100%; /* Ensure container takes width */
          display: flex;
          flex-direction: column; /* Stack bottom images too */
          gap: 15px;
-     }
-    .image-box-bottom-left, .image-box-bottom-right{
+    }
+    .image-box-bottom-leftShort, .image-box-bottom-rightShort{
          width: 100%; /* Ensure these take full width inside container */
-     }
+    }
+    .image-gallery{
+        display: none;
+    }
 }
-
-
